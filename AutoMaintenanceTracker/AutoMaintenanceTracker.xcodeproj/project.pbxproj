@@ -15,6 +15,9 @@
 		92D1BBCD1E9C3D02000F373F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D1BBCB1E9C3D02000F373F /* LaunchScreen.storyboard */; };
 		92D1BBD81E9C3D02000F373F /* AutoMaintenanceTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1BBD71E9C3D02000F373F /* AutoMaintenanceTrackerTests.swift */; };
 		92D1BBE31E9C3D02000F373F /* AutoMaintenanceTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1BBE21E9C3D02000F373F /* AutoMaintenanceTrackerUITests.swift */; };
+		93174F771E9DA022002691AD /* carimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 93174F761E9DA022002691AD /* carimage.png */; };
+		93174F791E9DA213002691AD /* CarsUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93174F781E9DA213002691AD /* CarsUIViewController.swift */; };
+		93174F7B1E9DA27A002691AD /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93174F7A1E9DA27A002691AD /* Car.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		92D1BBDE1E9C3D02000F373F /* AutoMaintenanceTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoMaintenanceTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D1BBE21E9C3D02000F373F /* AutoMaintenanceTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMaintenanceTrackerUITests.swift; sourceTree = "<group>"; };
 		92D1BBE41E9C3D02000F373F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93174F761E9DA022002691AD /* carimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carimage.png; sourceTree = "<group>"; };
+		93174F781E9DA213002691AD /* CarsUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsUIViewController.swift; sourceTree = "<group>"; };
+		93174F7A1E9DA27A002691AD /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +108,11 @@
 				92D1BBBF1E9C3D02000F373F /* AppDelegate.swift */,
 				92D1BBC11E9C3D02000F373F /* ViewController.swift */,
 				92D1BBC31E9C3D02000F373F /* Main.storyboard */,
+				93174F781E9DA213002691AD /* CarsUIViewController.swift */,
+				93174F7A1E9DA27A002691AD /* Car.swift */,
 				92D1BBC91E9C3D02000F373F /* Assets.xcassets */,
 				92D1BBCB1E9C3D02000F373F /* LaunchScreen.storyboard */,
+				93174F761E9DA022002691AD /* carimage.png */,
 				92D1BBCE1E9C3D02000F373F /* Info.plist */,
 				92D1BBC61E9C3D02000F373F /* AutoMaintenanceTracker.xcdatamodeld */,
 			);
@@ -235,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93174F771E9DA022002691AD /* carimage.png in Resources */,
 				92D1BBCD1E9C3D02000F373F /* LaunchScreen.storyboard in Resources */,
 				92D1BBCA1E9C3D02000F373F /* Assets.xcassets in Resources */,
 				92D1BBC51E9C3D02000F373F /* Main.storyboard in Resources */,
@@ -264,7 +274,9 @@
 			files = (
 				92D1BBC21E9C3D02000F373F /* ViewController.swift in Sources */,
 				92D1BBC81E9C3D02000F373F /* AutoMaintenanceTracker.xcdatamodeld in Sources */,
+				93174F7B1E9DA27A002691AD /* Car.swift in Sources */,
 				92D1BBC01E9C3D02000F373F /* AppDelegate.swift in Sources */,
+				93174F791E9DA213002691AD /* CarsUIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +523,7 @@
 				92D1BBE91E9C3D02000F373F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92D1BBEA1E9C3D02000F373F /* Build configuration list for PBXNativeTarget "AutoMaintenanceTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +532,7 @@
 				92D1BBEC1E9C3D02000F373F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92D1BBED1E9C3D02000F373F /* Build configuration list for PBXNativeTarget "AutoMaintenanceTrackerUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +541,7 @@
 				92D1BBEF1E9C3D02000F373F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
