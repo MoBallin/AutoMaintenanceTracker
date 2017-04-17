@@ -1,18 +1,18 @@
 //
-//  CarsUIViewController.swift
+//  HistoryViewController.swift
 //  AutoMaintenanceTracker
 //
-//  Created by Aaron Whaley on 4/11/17.
+//  Created by Geoffrey Husser on 4/17/17.
 //  Copyright © 2017 Mohammed Diab. All rights reserved.
 //
 
 import UIKit
 
-class CarsUIViewController: UIViewController {
+class HistoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
 

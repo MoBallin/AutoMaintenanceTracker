@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CA4B5851EA5774000657231 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4B5841EA5774000657231 /* HistoryViewController.swift */; };
+		6CA4B5871EA57B9E00657231 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4B5861EA57B9E00657231 /* searchViewController.swift */; };
+		6CA4B5891EA57BC400657231 /* moreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4B5881EA57BC400657231 /* moreViewController.swift */; };
 		92D1BBC01E9C3D02000F373F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1BBBF1E9C3D02000F373F /* AppDelegate.swift */; };
 		92D1BBC21E9C3D02000F373F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1BBC11E9C3D02000F373F /* ViewController.swift */; };
 		92D1BBC51E9C3D02000F373F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D1BBC31E9C3D02000F373F /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6CA4B5841EA5774000657231 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		6CA4B5861EA57B9E00657231 /* searchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
+		6CA4B5881EA57BC400657231 /* moreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = moreViewController.swift; sourceTree = "<group>"; };
 		92D1BBBC1E9C3D02000F373F /* AutoMaintenanceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoMaintenanceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D1BBBF1E9C3D02000F373F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92D1BBC11E9C3D02000F373F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +114,8 @@
 				92D1BBBF1E9C3D02000F373F /* AppDelegate.swift */,
 				92D1BBC11E9C3D02000F373F /* ViewController.swift */,
 				92D1BBC31E9C3D02000F373F /* Main.storyboard */,
+				6CA4B5881EA57BC400657231 /* moreViewController.swift */,
+				6CA4B5861EA57B9E00657231 /* searchViewController.swift */,
 				93174F781E9DA213002691AD /* CarsUIViewController.swift */,
 				93174F7A1E9DA27A002691AD /* Car.swift */,
 				92D1BBC91E9C3D02000F373F /* Assets.xcassets */,
@@ -115,6 +123,7 @@
 				93174F761E9DA022002691AD /* carimage.png */,
 				92D1BBCE1E9C3D02000F373F /* Info.plist */,
 				92D1BBC61E9C3D02000F373F /* AutoMaintenanceTracker.xcdatamodeld */,
+				6CA4B5841EA5774000657231 /* HistoryViewController.swift */,
 			);
 			path = AutoMaintenanceTracker;
 			sourceTree = "<group>";
@@ -272,9 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CA4B5871EA57B9E00657231 /* searchViewController.swift in Sources */,
 				92D1BBC21E9C3D02000F373F /* ViewController.swift in Sources */,
 				92D1BBC81E9C3D02000F373F /* AutoMaintenanceTracker.xcdatamodeld in Sources */,
 				93174F7B1E9DA27A002691AD /* Car.swift in Sources */,
+				6CA4B5851EA5774000657231 /* HistoryViewController.swift in Sources */,
+				6CA4B5891EA57BC400657231 /* moreViewController.swift in Sources */,
 				92D1BBC01E9C3D02000F373F /* AppDelegate.swift in Sources */,
 				93174F791E9DA213002691AD /* CarsUIViewController.swift in Sources */,
 			);
