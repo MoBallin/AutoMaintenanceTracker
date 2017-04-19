@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE84116B1E9FE56D00A333B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84116A1E9FE56D00A333B7 /* AppDelegate.swift */; };
+		EE84116D1E9FE56D00A333B7 /* Garage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84116C1E9FE56D00A333B7 /* Garage2ViewController.swift */; };
+		EE8411701E9FE56D00A333B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE84116E1E9FE56D00A333B7 /* Main.storyboard */; };
+		EE8411731E9FE56D00A333B7 /* CarTable.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE8411711E9FE56D00A333B7 /* CarTable.xcdatamodeld */; };
+		EE8411751E9FE56D00A333B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8411741E9FE56D00A333B7 /* Assets.xcassets */; };
+		EE8411781E9FE56D00A333B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8411761E9FE56D00A333B7 /* LaunchScreen.storyboard */; };
+		EE8411831E9FE56D00A333B7 /* CarTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8411821E9FE56D00A333B7 /* CarTableTests.swift */; };
+		EE84118E1E9FE56D00A333B7 /* CarTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84118D1E9FE56D00A333B7 /* CarTableUITests.swift */; };
+		EE84119C1EA52C6C00A333B7 /* CarStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84119B1EA52C6C00A333B7 /* CarStructs.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE84117F1E9FE56D00A333B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE84115F1E9FE56D00A333B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE8411661E9FE56D00A333B7;
+			remoteInfo = CarTable;
+		};
+		EE84118A1E9FE56D00A333B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE84115F1E9FE56D00A333B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE8411661E9FE56D00A333B7;
+			remoteInfo = CarTable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE8411671E9FE56D00A333B7 /* CarTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE84116A1E9FE56D00A333B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE84116C1E9FE56D00A333B7 /* Garage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garage2ViewController.swift; sourceTree = "<group>"; };
+		EE84116F1E9FE56D00A333B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE8411721E9FE56D00A333B7 /* CarTable.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarTable.xcdatamodel; sourceTree = "<group>"; };
+		EE8411741E9FE56D00A333B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE8411771E9FE56D00A333B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE8411791E9FE56D00A333B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE84117E1E9FE56D00A333B7 /* CarTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8411821E9FE56D00A333B7 /* CarTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableTests.swift; sourceTree = "<group>"; };
+		EE8411841E9FE56D00A333B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE8411891E9FE56D00A333B7 /* CarTableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarTableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE84118D1E9FE56D00A333B7 /* CarTableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableUITests.swift; sourceTree = "<group>"; };
+		EE84118F1E9FE56D00A333B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE84119B1EA52C6C00A333B7 /* CarStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarStructs.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE8411641E9FE56D00A333B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE84117B1E9FE56D00A333B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE8411861E9FE56D00A333B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE84115E1E9FE56D00A333B7 = {
+			isa = PBXGroup;
+			children = (
+				EE8411691E9FE56D00A333B7 /* CarTable */,
+				EE8411811E9FE56D00A333B7 /* CarTableTests */,
+				EE84118C1E9FE56D00A333B7 /* CarTableUITests */,
+				EE8411681E9FE56D00A333B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE8411681E9FE56D00A333B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE8411671E9FE56D00A333B7 /* CarTable.app */,
+				EE84117E1E9FE56D00A333B7 /* CarTableTests.xctest */,
+				EE8411891E9FE56D00A333B7 /* CarTableUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE8411691E9FE56D00A333B7 /* CarTable */ = {
+			isa = PBXGroup;
+			children = (
+				EE84116A1E9FE56D00A333B7 /* AppDelegate.swift */,
+				EE84116C1E9FE56D00A333B7 /* Garage2ViewController.swift */,
+				EE84119B1EA52C6C00A333B7 /* CarStructs.swift */,
+				EE84116E1E9FE56D00A333B7 /* Main.storyboard */,
+				EE8411741E9FE56D00A333B7 /* Assets.xcassets */,
+				EE8411761E9FE56D00A333B7 /* LaunchScreen.storyboard */,
+				EE8411791E9FE56D00A333B7 /* Info.plist */,
+				EE8411711E9FE56D00A333B7 /* CarTable.xcdatamodeld */,
+			);
+			path = CarTable;
+			sourceTree = "<group>";
+		};
+		EE8411811E9FE56D00A333B7 /* CarTableTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE8411821E9FE56D00A333B7 /* CarTableTests.swift */,
+				EE8411841E9FE56D00A333B7 /* Info.plist */,
+			);
+			path = CarTableTests;
+			sourceTree = "<group>";
+		};
+		EE84118C1E9FE56D00A333B7 /* CarTableUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE84118D1E9FE56D00A333B7 /* CarTableUITests.swift */,
+				EE84118F1E9FE56D00A333B7 /* Info.plist */,
+			);
+			path = CarTableUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE8411661E9FE56D00A333B7 /* CarTable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE8411921E9FE56D00A333B7 /* Build configuration list for PBXNativeTarget "CarTable" */;
+			buildPhases = (
+				EE8411631E9FE56D00A333B7 /* Sources */,
+				EE8411641E9FE56D00A333B7 /* Frameworks */,
+				EE8411651E9FE56D00A333B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarTable;
+			productName = CarTable;
+			productReference = EE8411671E9FE56D00A333B7 /* CarTable.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE84117D1E9FE56D00A333B7 /* CarTableTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE8411951E9FE56D00A333B7 /* Build configuration list for PBXNativeTarget "CarTableTests" */;
+			buildPhases = (
+				EE84117A1E9FE56D00A333B7 /* Sources */,
+				EE84117B1E9FE56D00A333B7 /* Frameworks */,
+				EE84117C1E9FE56D00A333B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE8411801E9FE56D00A333B7 /* PBXTargetDependency */,
+			);
+			name = CarTableTests;
+			productName = CarTableTests;
+			productReference = EE84117E1E9FE56D00A333B7 /* CarTableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE8411881E9FE56D00A333B7 /* CarTableUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE8411981E9FE56D00A333B7 /* Build configuration list for PBXNativeTarget "CarTableUITests" */;
+			buildPhases = (
+				EE8411851E9FE56D00A333B7 /* Sources */,
+				EE8411861E9FE56D00A333B7 /* Frameworks */,
+				EE8411871E9FE56D00A333B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE84118B1E9FE56D00A333B7 /* PBXTargetDependency */,
+			);
+			name = CarTableUITests;
+			productName = CarTableUITests;
+			productReference = EE8411891E9FE56D00A333B7 /* CarTableUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE84115F1E9FE56D00A333B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Cord N Stojeba";
+				TargetAttributes = {
+					EE8411661E9FE56D00A333B7 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+					};
+					EE84117D1E9FE56D00A333B7 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE8411661E9FE56D00A333B7;
+					};
+					EE8411881E9FE56D00A333B7 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE8411661E9FE56D00A333B7;
+					};
+				};
+			};
+			buildConfigurationList = EE8411621E9FE56D00A333B7 /* Build configuration list for PBXProject "CarTable" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE84115E1E9FE56D00A333B7;
+			productRefGroup = EE8411681E9FE56D00A333B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE8411661E9FE56D00A333B7 /* CarTable */,
+				EE84117D1E9FE56D00A333B7 /* CarTableTests */,
+				EE8411881E9FE56D00A333B7 /* CarTableUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE8411651E9FE56D00A333B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE8411781E9FE56D00A333B7 /* LaunchScreen.storyboard in Resources */,
+				EE8411751E9FE56D00A333B7 /* Assets.xcassets in Resources */,
+				EE8411701E9FE56D00A333B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE84117C1E9FE56D00A333B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE8411871E9FE56D00A333B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE8411631E9FE56D00A333B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE8411731E9FE56D00A333B7 /* CarTable.xcdatamodeld in Sources */,
+				EE84119C1EA52C6C00A333B7 /* CarStructs.swift in Sources */,
+				EE84116D1E9FE56D00A333B7 /* Garage2ViewController.swift in Sources */,
+				EE84116B1E9FE56D00A333B7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE84117A1E9FE56D00A333B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE8411831E9FE56D00A333B7 /* CarTableTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE8411851E9FE56D00A333B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE84118E1E9FE56D00A333B7 /* CarTableUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE8411801E9FE56D00A333B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE8411661E9FE56D00A333B7 /* CarTable */;
+			targetProxy = EE84117F1E9FE56D00A333B7 /* PBXContainerItemProxy */;
+		};
+		EE84118B1E9FE56D00A333B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE8411661E9FE56D00A333B7 /* CarTable */;
+			targetProxy = EE84118A1E9FE56D00A333B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE84116E1E9FE56D00A333B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE84116F1E9FE56D00A333B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE8411761E9FE56D00A333B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE8411771E9FE56D00A333B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE8411901E9FE56D00A333B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE8411911E9FE56D00A333B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE8411931E9FE56D00A333B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CarTable/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.missouri.CarTable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EE8411941E9FE56D00A333B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CarTable/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.missouri.CarTable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EE8411961E9FE56D00A333B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CarTableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.missouri.CarTableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarTable.app/CarTable";
+			};
+			name = Debug;
+		};
+		EE8411971E9FE56D00A333B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CarTableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.missouri.CarTableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarTable.app/CarTable";
+			};
+			name = Release;
+		};
+		EE8411991E9FE56D00A333B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = CarTableUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.missouri.CarTableUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CarTable;
+			};
+			name = Debug;
+		};
+		EE84119A1E9FE56D00A333B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = CarTableUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.missouri.CarTableUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CarTable;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE8411621E9FE56D00A333B7 /* Build configuration list for PBXProject "CarTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE8411901E9FE56D00A333B7 /* Debug */,
+				EE8411911E9FE56D00A333B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE8411921E9FE56D00A333B7 /* Build configuration list for PBXNativeTarget "CarTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE8411931E9FE56D00A333B7 /* Debug */,
+				EE8411941E9FE56D00A333B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE8411951E9FE56D00A333B7 /* Build configuration list for PBXNativeTarget "CarTableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE8411961E9FE56D00A333B7 /* Debug */,
+				EE8411971E9FE56D00A333B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE8411981E9FE56D00A333B7 /* Build configuration list for PBXNativeTarget "CarTableUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE8411991E9FE56D00A333B7 /* Debug */,
+				EE84119A1E9FE56D00A333B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EE8411711E9FE56D00A333B7 /* CarTable.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EE8411721E9FE56D00A333B7 /* CarTable.xcdatamodel */,
+			);
+			currentVersion = EE8411721E9FE56D00A333B7 /* CarTable.xcdatamodel */;
+			path = CarTable.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EE84115F1E9FE56D00A333B7 /* Project object */;
+}

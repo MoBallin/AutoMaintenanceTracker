@@ -16,8 +16,8 @@
 		92D1BBD81E9C3D02000F373F /* AutoMaintenanceTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1BBD71E9C3D02000F373F /* AutoMaintenanceTrackerTests.swift */; };
 		92D1BBE31E9C3D02000F373F /* AutoMaintenanceTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1BBE21E9C3D02000F373F /* AutoMaintenanceTrackerUITests.swift */; };
 		93174F771E9DA022002691AD /* carimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 93174F761E9DA022002691AD /* carimage.png */; };
-		93174F791E9DA213002691AD /* CarsUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93174F781E9DA213002691AD /* CarsUIViewController.swift */; };
 		93174F7B1E9DA27A002691AD /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93174F7A1E9DA27A002691AD /* Car.swift */; };
+		EE0C0B491EA7D359009FCA95 /* CarTable in Resources */ = {isa = PBXBuildFile; fileRef = EE0C0B481EA7D359009FCA95 /* CarTable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,8 @@
 		92D1BBE21E9C3D02000F373F /* AutoMaintenanceTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMaintenanceTrackerUITests.swift; sourceTree = "<group>"; };
 		92D1BBE41E9C3D02000F373F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93174F761E9DA022002691AD /* carimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carimage.png; sourceTree = "<group>"; };
-		93174F781E9DA213002691AD /* CarsUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsUIViewController.swift; sourceTree = "<group>"; };
 		93174F7A1E9DA27A002691AD /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		EE0C0B481EA7D359009FCA95 /* CarTable */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CarTable; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +85,7 @@
 		92D1BBB31E9C3D02000F373F = {
 			isa = PBXGroup;
 			children = (
+				EE0C0B481EA7D359009FCA95 /* CarTable */,
 				92D1BBBE1E9C3D02000F373F /* AutoMaintenanceTracker */,
 				92D1BBD61E9C3D02000F373F /* AutoMaintenanceTrackerTests */,
 				92D1BBE11E9C3D02000F373F /* AutoMaintenanceTrackerUITests */,
@@ -108,7 +109,6 @@
 				92D1BBBF1E9C3D02000F373F /* AppDelegate.swift */,
 				92D1BBC11E9C3D02000F373F /* ViewController.swift */,
 				92D1BBC31E9C3D02000F373F /* Main.storyboard */,
-				93174F781E9DA213002691AD /* CarsUIViewController.swift */,
 				93174F7A1E9DA27A002691AD /* Car.swift */,
 				92D1BBC91E9C3D02000F373F /* Assets.xcassets */,
 				92D1BBCB1E9C3D02000F373F /* LaunchScreen.storyboard */,
@@ -248,6 +248,7 @@
 				92D1BBCD1E9C3D02000F373F /* LaunchScreen.storyboard in Resources */,
 				92D1BBCA1E9C3D02000F373F /* Assets.xcassets in Resources */,
 				92D1BBC51E9C3D02000F373F /* Main.storyboard in Resources */,
+				EE0C0B491EA7D359009FCA95 /* CarTable in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +277,6 @@
 				92D1BBC81E9C3D02000F373F /* AutoMaintenanceTracker.xcdatamodeld in Sources */,
 				93174F7B1E9DA27A002691AD /* Car.swift in Sources */,
 				92D1BBC01E9C3D02000F373F /* AppDelegate.swift in Sources */,
-				93174F791E9DA213002691AD /* CarsUIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
