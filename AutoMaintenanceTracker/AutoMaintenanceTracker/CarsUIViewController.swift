@@ -8,8 +8,15 @@
 
 import UIKit
 
-class CarsUIViewController: UIViewController {
+class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
+    @IBOutlet weak var myGarage: UITableView!
+    
+    var cars:[Car]? = [
+        Car(name: "Cord's Car", model: "X Terra", year: "2006", make: "Nissan" ),
+        Car(name: "Mohammed's Whip", model: "TL-S", year: "2008", make: "Acura")
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +27,30 @@ class CarsUIViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+  
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if let cars = cars{
+            return cars.count
+        }
+        else{
+            return 0
+        }
+        
+    }
     
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let carCell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "carCell")
+        if let cars = cars{
+            // print(cars.count)
+            carCell.textLabel?.text = cars[indexPath.row].name + ": " + cars[indexPath.row].year + " " + cars[indexPath.row].make + cars[indexPath.row].model
+            //        carCell.imageView?.image = cars[indexPath.row].image
+        }
+        
+        return (carCell)
+        
+    }
 
     /*
     // MARK: - Navigation
