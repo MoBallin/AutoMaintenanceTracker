@@ -11,10 +11,10 @@ import Foundation
 struct Car{
     var name: String
     var model: String
-    var year: Int32
+    var year: String
     var make: String
     
-    init(name: String, model: String, year: Int32, make: String){
+    init(name: String, model: String, year: String, make: String){
         self.name = name
         self.model = model
         self.year = year
