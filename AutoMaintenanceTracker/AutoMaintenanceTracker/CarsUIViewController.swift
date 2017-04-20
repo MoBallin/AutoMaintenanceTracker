@@ -13,7 +13,7 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var myGarage: UITableView!
     
     var cars:[Car]? = [
-        Car(name: "Cord's Car", model: "X Terra", year: "2006", make: "Nissan" ),
+        Car(name: "Cord's Car", model: "X Terra", year: "2004", make: "Nissan" ),
         Car(name: "Mohammed's Whip", model: "TL-S", year: "2008", make: "Acura")
     ]
     
@@ -41,11 +41,14 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let carCell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "carCell")
+        let carCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "carCell")
         if let cars = cars{
-            // print(cars.count)
-            carCell.textLabel?.text = cars[indexPath.row].name + ": " + cars[indexPath.row].year + " " + cars[indexPath.row].make + cars[indexPath.row].model
-            //        carCell.imageView?.image = cars[indexPath.row].image
+            
+            carCell.textLabel?.text = cars[indexPath.row].name
+                
+            carCell.detailTextLabel?.text = cars[indexPath.row].year + " " + cars[indexPath.row].make + cars[indexPath.row].model
+
+            carCell.imageView?.image = #imageLiteral(resourceName: "carimage.png")
         }
         
         return (carCell)
