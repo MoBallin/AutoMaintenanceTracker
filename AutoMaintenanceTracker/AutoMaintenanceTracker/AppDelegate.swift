@@ -54,6 +54,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          error conditions that could cause the creation of the store to fail.
         */
         let container = NSPersistentContainer(name: "AutoMaintenanceTracker")
+        let group = DispatchGroup()
+        group.enter()
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -69,7 +71,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                  */
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
+            group.leave()
         })
+        
+        group.wait()
         return container
     }()
 

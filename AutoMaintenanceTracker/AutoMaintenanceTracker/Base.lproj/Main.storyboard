@@ -64,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juc-Fx-ygi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1814" y="709"/>
+            <point key="canvasLocation" x="1526" y="691"/>
         </scene>
         <!--Item-->
         <scene sceneID="gyb-d9-oH3">
@@ -138,7 +138,7 @@
         <!--New CarUI View Controller-->
         <scene sceneID="mc5-BK-7BM">
             <objects>
-                <viewController id="VNM-2d-r1D" customClass="NewCarUIViewController" sceneMemberID="viewController">
+                <viewController id="VNM-2d-r1D" customClass="NewCarUIViewController" customModule="AutoMaintenanceTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DYi-3V-MVu"/>
                         <viewControllerLayoutGuide type="bottom" id="oKf-u6-cza"/>
@@ -196,6 +196,9 @@
                                 <rect key="frame" x="147" y="517.5" width="81" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save Car"/>
+                                <connections>
+                                    <action selector="saveNewCar:" destination="VNM-2d-r1D" eventType="touchUpInside" id="uXu-dp-ntB"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pmu-OE-jRe">
                                 <rect key="frame" x="113" y="225.5" width="150" height="30"/>
@@ -235,6 +238,12 @@
                             <constraint firstItem="M8d-4P-nWt" firstAttribute="centerX" secondItem="xg1-iN-R9p" secondAttribute="centerX" id="vqQ-BU-huR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="newCarMake" destination="M8d-4P-nWt" id="DCY-oz-2em"/>
+                        <outlet property="newCarModel" destination="MUi-4n-D3u" id="Wti-Wh-KcK"/>
+                        <outlet property="newCarName" destination="t3v-EJ-I0r" id="hNN-qH-oQJ"/>
+                        <outlet property="newCarYear" destination="Pmu-OE-jRe" id="S3d-2l-Rt0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vsa-3N-me3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
