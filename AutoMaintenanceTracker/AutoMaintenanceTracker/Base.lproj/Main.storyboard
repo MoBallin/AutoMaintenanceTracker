@@ -47,7 +47,7 @@
             </objects>
             <point key="canvasLocation" x="1228" y="1421"/>
         </scene>
-        <!--View Controller-->
+        <!--Car Maintenance-->
         <scene sceneID="2AM-S4-F73">
             <objects>
                 <viewController id="8PM-g9-Nqg" sceneMemberID="viewController">
@@ -60,17 +60,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="history" id="IsX-Y3-7U2"/>
+                    <tabBarItem key="tabBarItem" title="Car Maintenance" image="garage0" id="IsX-Y3-7U2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juc-Fx-ygi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1526" y="691"/>
         </scene>
-        <!--Item-->
+        <!--My Cars-->
         <scene sceneID="gyb-d9-oH3">
             <objects>
                 <navigationController id="NTv-lm-SyT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="RVe-pb-OSv"/>
+                    <tabBarItem key="tabBarItem" title="My Cars" image="home0" id="RVe-pb-OSv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0SC-DX-EV7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -83,7 +83,7 @@
             </objects>
             <point key="canvasLocation" x="1526" y="-91"/>
         </scene>
-        <!--Cars-->
+        <!--My Cars-->
         <scene sceneID="K57-p2-3Rx">
             <objects>
                 <viewController id="KiS-QR-Zc2" customClass="CarsUIViewController" customModule="AutoMaintenanceTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,7 +117,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cars" image="carimage.png" selectedImage="carimage.png" id="CQV-cI-0gQ" propertyAccessControl="none">
+                    <tabBarItem key="tabBarItem" title="My Cars" image="home0" id="CQV-cI-0gQ" propertyAccessControl="none">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="v2G-Vi-Pwx">
@@ -271,6 +271,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="carimage.png" width="38" height="32"/>
+        <image name="garage0" width="25" height="25"/>
+        <image name="home0" width="25" height="25"/>
     </resources>
 </document>
