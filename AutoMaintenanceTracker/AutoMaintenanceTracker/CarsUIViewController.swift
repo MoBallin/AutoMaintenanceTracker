@@ -7,19 +7,37 @@
 //
 
 import UIKit
+import CoreData
 
-class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate  {
 
     @IBOutlet weak var myGarage: UITableView!
     
-    var cars:[Car]? = [
-        Car(name: "Cord's Car", model: "X Terra", year: "2004", make: "Nissan" ),
-        Car(name: "Mohammed's Whip", model: "TL-S", year: "2008", make: "Acura")
-    ]
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    lazy var fetchedResultsController: NSFetchedResultsController<Car> = {
+        let request = NSFetchRequest<Car>(entityName: "Car")
+        request.predicate = nil
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+    
+        let frc = NSFetchedResultsController<Car>(fetchRequest: request,
+                                             managedObjectContext: self.managedObjectContext,
+                                             sectionNameKeyPath: nil, cacheName: nil)
+        
+        
+        frc.delegate = self
+        try! frc.performFetch()
+        
+        return frc
+    }()
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        myGarage.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -29,29 +47,19 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
   
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if let cars = cars{
-            return cars.count
-        }
-        else{
-            return 0
-        }
-        
+        return fetchedResultsController.fetchedObjects?.count ?? 0
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let carCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "carCell")
-        if let cars = cars{
-            
-            carCell.textLabel?.text = cars[indexPath.row].name
-                
-            carCell.detailTextLabel?.text = cars[indexPath.row].year + " " + cars[indexPath.row].make + cars[indexPath.row].model
-
-            carCell.imageView?.image = #imageLiteral(resourceName: "carimage.png")
-        }
+        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "carCell")
+        let car = fetchedResultsController.fetchedObjects![indexPath.row]
         
-        return (carCell)
+        cell.textLabel?.text = car.name
+        cell.detailTextLabel?.text = car.year + " " + car.make + car.model
+        cell.imageView?.image = #imageLiteral(resourceName: "carimage.png")
+        
+        return cell
         
     }
 

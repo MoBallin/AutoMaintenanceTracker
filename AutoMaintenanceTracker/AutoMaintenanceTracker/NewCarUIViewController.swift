@@ -7,60 +7,36 @@
 //
 
 import UIKit
-
+import CoreData
 class NewCarUIViewController: UIViewController {
 
+    
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     @IBOutlet weak var newCarName: UITextField!
     @IBOutlet weak var newCarMake: UITextField!
     @IBOutlet weak var newCarModel: UITextField!
     @IBOutlet weak var newCarYear: UITextField!
-  //  var newCar: Car
     
-    @IBAction func SaveNewCar(_ sender: UIButton) {
-        var newCar: Car! = Car(name: " ", model: " ", year: " ", make: " " )
-        //
-        //
-        //POSSIBLY DANEROUS CODE 
-        //
-        //
-        if newCarName == nil || newCarName.text == " "
-        {
-            newCar.name = "New Car"
-        }
+    @IBAction func saveNewCar(_ sender: UIButton) {
         
-        else
-        {
-            newCar.name = newCarName.text!
-        }
+        let car = NSEntityDescription.insertNewObject(forEntityName: "Car", into: managedObjectContext) as! Car
         
-        newCar.make = newCarMake.text!
-        newCar.model = newCarModel.text!
-        newCar.year = newCarYear.text!
+        car.name = newCarName.text ?? ""
+        car.make = newCarMake.text ?? ""
+        car.year = newCarYear.text ?? ""
+        car.model = newCarModel.text ?? ""
         
-    
-    
+        try! managedObjectContext.save()
         
+        self.navigationController?.popViewController(animated: true)
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        
-        
-        
-        
-    
     
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
     /*
     // MARK: - Navigation
 

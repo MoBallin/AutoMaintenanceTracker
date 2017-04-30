@@ -7,17 +7,16 @@
 //
 
 import Foundation
+import CoreData
 
-struct Car{
-    var name: String
-    var model: String
-    var year: String
-    var make: String
+@objc(Car)
+class Car: NSManagedObject {
     
-    init(name: String, model: String, year: String, make: String){
-        self.name = name
-        self.model = model
-        self.year = year
-        self.make = make
-    }
+    
+    
+    @NSManaged var name: String
+    @NSManaged var model: String
+    @NSManaged var year: String
+    @NSManaged var make: String
+    
 }
