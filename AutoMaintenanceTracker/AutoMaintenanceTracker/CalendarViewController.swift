@@ -60,7 +60,7 @@ class CalendarViewController: UIViewController {
         let totalDays: Int = Int(oilMileage)/num
         dayComponent.day = totalDays
         let schedDate = cal.date(byAdding: dayComponent, to: currentDate)
-        testLabel.text = String(describing: schedDate)
+        //testLabel.text = String(describing: schedDate)
         addEventToCalendar(title: "Oil Change", startDate: schedDate!, endDate: schedDate!)
         
         UIApplication.shared.openURL(NSURL(string: "calshow://")! as URL)
