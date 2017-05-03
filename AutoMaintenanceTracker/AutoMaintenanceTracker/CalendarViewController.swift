@@ -28,6 +28,13 @@ class CalendarViewController: UIViewController {
     
     @IBAction func scheduleChange(_ sender: Any) {
         
+        if(oilType.selectedSegmentIndex == 0)
+        {
+            
+        }
+        else{
+            
+        }
     }
     
     /*
