@@ -12,6 +12,7 @@ import CoreData
 class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate  {
 
     @IBOutlet weak var myGarage: UITableView!
+    @IBOutlet var AppBackground: UIView!
     
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -31,13 +32,21 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return frc
     }()
     
+   
+    
+    
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         myGarage.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        myGarage.backgroundView = UIImageView(image: UIImage(named: "Landing.png"))
+//        myGarage.backgroundView?.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+   //   AppBackground?.contentMode = .scaleAspectFit
+  //      topLayoutGuide
         
+      // AppBackground = UIImageView(image: UIImage(named: "Landing.png"))
         // Do any additional setup after loading the view.
     }
 
@@ -58,6 +67,10 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.textLabel?.text = car.name
         cell.detailTextLabel?.text = car.year + " " + car.make + car.model
         cell.imageView?.image = #imageLiteral(resourceName: "carimage.png")
+        
+        cell.backgroundColor = UIColor.clear
+        //  cell.backgroundView =
+    //    cell.selectedBackgroundView =
         
         return cell
         

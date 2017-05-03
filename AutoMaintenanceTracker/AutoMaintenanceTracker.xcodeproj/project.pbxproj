@@ -20,6 +20,7 @@
 		93174F7B1E9DA27A002691AD /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93174F7A1E9DA27A002691AD /* Car.swift */; };
 		93174F8C1EB95740002691AD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93174F8B1EB95740002691AD /* CalendarViewController.swift */; };
 		EECC9A731EA848910015B286 /* NewCarUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC9A721EA848910015B286 /* NewCarUIViewController.swift */; };
+		EECC9A771EB81F830015B286 /* Landing.png in Resources */ = {isa = PBXBuildFile; fileRef = EECC9A761EB81F830015B286 /* Landing.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		93174F7A1E9DA27A002691AD /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		93174F8B1EB95740002691AD /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		EECC9A721EA848910015B286 /* NewCarUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCarUIViewController.swift; sourceTree = "<group>"; };
+		EECC9A761EB81F830015B286 /* Landing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Landing.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				EECC9A721EA848910015B286 /* NewCarUIViewController.swift */,
 				92D1BBC91E9C3D02000F373F /* Assets.xcassets */,
 				92D1BBCB1E9C3D02000F373F /* LaunchScreen.storyboard */,
+				EECC9A761EB81F830015B286 /* Landing.png */,
 				93174F761E9DA022002691AD /* carimage.png */,
 				92D1BBCE1E9C3D02000F373F /* Info.plist */,
 				92D1BBC61E9C3D02000F373F /* AutoMaintenanceTracker.xcdatamodeld */,
@@ -250,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EECC9A771EB81F830015B286 /* Landing.png in Resources */,
 				93174F771E9DA022002691AD /* carimage.png in Resources */,
 				92D1BBCD1E9C3D02000F373F /* LaunchScreen.storyboard in Resources */,
 				92D1BBCA1E9C3D02000F373F /* Assets.xcassets in Resources */,

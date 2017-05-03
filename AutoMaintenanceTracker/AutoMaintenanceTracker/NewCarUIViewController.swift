@@ -11,6 +11,11 @@ import CoreData
 class NewCarUIViewController: UIViewController {
 
     
+    @IBOutlet var backGroundView: UIView!
+  //  @IBOutlet var backgroundView: UIView!
+
+   
+  
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet weak var newCarName: UITextField!
@@ -35,6 +40,10 @@ class NewCarUIViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Landing.png")!)
+        
+//  backGroundView = UIImageView(image: UIImage(named: "Landing.png"))
+        
     }
     
     /*
