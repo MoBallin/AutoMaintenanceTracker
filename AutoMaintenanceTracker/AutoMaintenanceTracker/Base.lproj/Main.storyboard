@@ -78,9 +78,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEj-aU-v9h">
-                                <rect key="frame" x="115.5" y="486" width="144" height="30"/>
+                                <rect key="frame" x="98" y="486" width="179" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Schedule Oil Change">
+                                <state key="normal" title="Schedule Next Oil Change">
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -169,7 +169,7 @@
                             <constraint firstItem="cpf-IW-vvg" firstAttribute="top" secondItem="b1O-ZP-fsO" secondAttribute="bottom" constant="26" id="yvH-jt-WMy"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Car Maintenance" image="garage0" id="IsX-Y3-7U2"/>
+                    <tabBarItem key="tabBarItem" title="Car Maintenance" image="home0" id="IsX-Y3-7U2"/>
                     <connections>
                         <outlet property="date" destination="qaj-dn-WC3" id="PBR-ka-YV0"/>
                         <outlet property="milesTrav" destination="b1O-ZP-fsO" id="hIE-MS-vgb"/>
@@ -396,7 +396,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="garage0" width="25" height="25"/>
         <image name="home0" width="25" height="25"/>
     </resources>
 </document>
