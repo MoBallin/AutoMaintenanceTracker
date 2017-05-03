@@ -2,7 +2,7 @@
 //  CalendarViewController.swift
 //  AutoMaintenanceTracker
 //
-//  Created by Mohammed Diab on 4/17/17.
+//  Created by Aaron Whaley on 5/2/17.
 //  Copyright © 2017 Mohammed Diab. All rights reserved.
 //
 
@@ -10,8 +10,11 @@ import UIKit
 
 class CalendarViewController: UIViewController {
 
-
-    /*
+    @IBOutlet weak var date: UIDatePicker!
+    @IBOutlet weak var milesTrav: UITextField!
+    @IBOutlet weak var oilType: UISegmentedControl!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,8 +26,11 @@ class CalendarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func scheduleChange(_ sender: Any) {
+        
+    }
     
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
