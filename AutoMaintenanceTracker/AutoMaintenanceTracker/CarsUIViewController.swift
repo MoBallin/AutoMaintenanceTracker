@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate  {
+    @IBOutlet weak var welcomeLabel: UILabel!
 
     @IBOutlet weak var myGarage: UITableView!
     @IBOutlet var AppBackground: UIView!
@@ -42,13 +43,8 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         myGarage.backgroundView = UIImageView(image: UIImage(named: "Landing.png"))
-//        myGarage.backgroundView?.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
-   //   AppBackground?.contentMode = .scaleAspectFit
-  //      topLayoutGuide
-        
-      // AppBackground = UIImageView(image: UIImage(named: "Landing.png"))
-        // Do any additional setup after loading the view.
-    }
+
+          }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -56,7 +52,23 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
   
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if fetchedResultsController.fetchedObjects?.count == 0
+        {
+            welcomeLabel.text = "Welcome! Please Add a New Car"
+        }
+        else
+        {
+            welcomeLabel.text = ""
+        }
+
+        
+        
+        
         return fetchedResultsController.fetchedObjects?.count ?? 0
+        
+    
+    
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,8 +84,9 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //  cell.backgroundView =
     //    cell.selectedBackgroundView =
         
-        return cell
         
+        return cell
+    
     }
 
     /*
