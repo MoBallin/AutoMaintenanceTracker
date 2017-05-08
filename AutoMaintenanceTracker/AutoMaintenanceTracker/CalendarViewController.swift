@@ -32,7 +32,7 @@ class CalendarViewController: UIViewController {
         
         let request = NSFetchRequest<Car>(entityName: "Car")
         request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-        let cars = try! managedObjectContext.fetch(request)
+        _ = try! managedObjectContext.fetch(request)
         
         // Do any additional setup after loading the view.
     }
@@ -66,7 +66,7 @@ class CalendarViewController: UIViewController {
         let milesText: String = milesTrav.text!
         let currentDate: Date = date.date
         let cal: Calendar = Calendar(identifier: .gregorian)
-        if let intVal = Int(milesText)
+        if Int(milesText) != nil
         {
             
         }
