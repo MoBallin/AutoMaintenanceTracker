@@ -63,7 +63,8 @@ class CalendarViewController: UIViewController {
         //testLabel.text = String(describing: schedDate)
         addEventToCalendar(title: "Oil Change", startDate: schedDate!, endDate: schedDate!)
         
-        UIApplication.shared.openURL(NSURL(string: "calshow://")! as URL)
+        UIApplication.shared.open(URL(string: "calshow://")!, options: [:], completionHandler: nil)
+        
         /*else
         {
             testLabel.text = milesTrav.text
