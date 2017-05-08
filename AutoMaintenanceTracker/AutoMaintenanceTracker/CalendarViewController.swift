@@ -8,8 +8,12 @@
 
 import UIKit
 import EventKit
+import CoreData
 
 class CalendarViewController: UIViewController {
+    
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     
     var delegate: EventAddedDelegate?
     var calendar: EKCalendar?
@@ -24,7 +28,11 @@ class CalendarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Landing.png")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Landing.png")!)
+        
+        let request = NSFetchRequest<Car>(entityName: "Car")
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        let cars = try! managedObjectContext.fetch(request)
         
         // Do any additional setup after loading the view.
     }
@@ -52,12 +60,23 @@ class CalendarViewController: UIViewController {
         if(milesTrav.text == "")
         {
             testLabel.text = "Please Enter Average Mileage"
+            return
         }
         
+        let milesText: String = milesTrav.text!
         let currentDate: Date = date.date
         let cal: Calendar = Calendar(identifier: .gregorian)
+        if let intVal = Int(milesText)
+        {
+            
+        }
+        else
+        {
+            testLabel.text = "Please Enter integer value for mileage"
+            return
+        }
         let num: Int = Int(milesTrav.text!)!
-        let totalDays: Int = Int(oilMileage)/num
+        let totalDays: Int = Int((Int(oilMileage)/num).toIntMax())
         dayComponent.day = totalDays
         let schedDate = cal.date(byAdding: dayComponent, to: currentDate)
         //testLabel.text = String(describing: schedDate)
