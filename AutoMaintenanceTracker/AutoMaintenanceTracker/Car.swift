@@ -12,11 +12,10 @@ import CoreData
 @objc(Car)
 class Car: NSManagedObject {
     
-    
-    
     @NSManaged var name: String
     @NSManaged var model: String
     @NSManaged var year: String
     @NSManaged var make: String
-    
+    @NSManaged var image: String?
+    @NSManaged var oilDate: Date?
 }

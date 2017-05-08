@@ -25,7 +25,7 @@ class NewCarUIViewController: UIViewController {
     
     @IBAction func saveNewCar(_ sender: UIButton) {
         
-        let car = NSEntityDescription.insertNewObject(forEntityName: "Car", into: managedObjectContext) as! Car
+        let car = Car(context: managedObjectContext)
         
         car.name = newCarName.text ?? ""
         car.make = newCarMake.text ?? ""
