@@ -96,6 +96,13 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
             car.managedObjectContext!.delete(car)
         }
     }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let destination = CarDetailViewController() // Your destination
+        navigationController?.pushViewController(destination, animated: true)
+        
+    }
 
     /*
     // MARK: - Navigation

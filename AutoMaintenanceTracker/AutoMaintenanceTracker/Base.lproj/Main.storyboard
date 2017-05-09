@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xrF-hA-ujh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xrF-hA-ujh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="246" y="1421"/>
         </scene>
-        <!--View Controller-->
+        <!--Tire Maintenance-->
         <scene sceneID="5Qr-Lp-Yn9">
             <objects>
                 <viewController id="ogM-mr-prQ" sceneMemberID="viewController">
@@ -41,13 +42,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="fYn-7b-kTx"/>
+                    <tabBarItem key="tabBarItem" title="Tire Maintenance" image="tires0" id="fYn-7b-kTx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XI5-AN-CfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1228" y="1421"/>
         </scene>
-        <!--Car Maintenance-->
+        <!--Oil Maintenance-->
         <scene sceneID="2AM-S4-F73">
             <objects>
                 <viewController id="8PM-g9-Nqg" customClass="CalendarViewController" customModule="AutoMaintenanceTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -169,7 +170,7 @@
                             <constraint firstItem="cpf-IW-vvg" firstAttribute="top" secondItem="b1O-ZP-fsO" secondAttribute="bottom" constant="26" id="yvH-jt-WMy"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Car Maintenance" image="home0" id="IsX-Y3-7U2"/>
+                    <tabBarItem key="tabBarItem" title="Oil Maintenance" image="oil0" id="IsX-Y3-7U2"/>
                     <connections>
                         <outlet property="date" destination="qaj-dn-WC3" id="PBR-ka-YV0"/>
                         <outlet property="milesTrav" destination="b1O-ZP-fsO" id="hIE-MS-vgb"/>
@@ -181,11 +182,11 @@
             </objects>
             <point key="canvasLocation" x="1525.5999999999999" y="690.40479760119945"/>
         </scene>
-        <!--My Cars-->
+        <!--My Car House-->
         <scene sceneID="gyb-d9-oH3">
             <objects>
                 <navigationController id="NTv-lm-SyT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Cars" image="home0" id="RVe-pb-OSv"/>
+                    <tabBarItem key="tabBarItem" title="My Car House" image="home0" id="RVe-pb-OSv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0SC-DX-EV7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -231,6 +232,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="mNl-dw-V45" kind="show" id="CAl-je-hfb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -266,6 +270,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qhl-KL-vp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2421.5999999999999" y="-91.304347826086968"/>
+        </scene>
+        <!--Car Detail View Controller-->
+        <scene sceneID="ld3-hp-HfH">
+            <objects>
+                <viewController id="lDJ-nX-cm9" customClass="CarDetailViewController" customModule="AutoMaintenanceTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mlB-86-eqn"/>
+                        <viewControllerLayoutGuide type="bottom" id="jzT-yk-bMc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cNC-XC-rHf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User's Car" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyM-MJ-hxE">
+                                <rect key="frame" x="66" y="79" width="243" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dyM-MJ-hxE" secondAttribute="trailing" constant="50" id="HBU-Ja-5q5"/>
+                            <constraint firstItem="dyM-MJ-hxE" firstAttribute="top" secondItem="mlB-86-eqn" secondAttribute="bottom" constant="15" id="hkB-Ip-80y"/>
+                            <constraint firstItem="dyM-MJ-hxE" firstAttribute="leading" secondItem="cNC-XC-rHf" secondAttribute="leadingMargin" constant="50" id="lZe-9i-Vwn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tsb-DX-7E6"/>
+                    <connections>
+                        <outlet property="carLabel" destination="dyM-MJ-hxE" id="NWD-Gt-mSe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99d-LB-Nnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4516" y="-833"/>
         </scene>
         <!--New CarUI View Controller-->
         <scene sceneID="mc5-BK-7BM">
@@ -380,7 +419,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vsa-3N-me3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3280.8000000000002" y="-91.304347826086968"/>
+            <point key="canvasLocation" x="3409" y="-72"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ddu-Vk-4aU">
@@ -402,8 +441,28 @@
             </objects>
             <point key="canvasLocation" x="247" y="239"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OE3-mJ-5ua">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mNl-dw-V45" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cQn-gu-Afc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lDJ-nX-cm9" kind="relationship" relationship="rootViewController" id="iC8-f2-4L0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zyE-0C-IIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3409" y="-833"/>
+        </scene>
     </scenes>
     <resources>
         <image name="home0" width="25" height="25"/>
+        <image name="oil0" width="25" height="25"/>
+        <image name="tires0" width="25" height="25"/>
     </resources>
 </document>
