@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xrF-hA-ujh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xrF-hA-ujh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,7 +32,7 @@
         <!--Tire Maintenance-->
         <scene sceneID="5Qr-Lp-Yn9">
             <objects>
-                <viewController id="ogM-mr-prQ" sceneMemberID="viewController">
+                <viewController id="ogM-mr-prQ" customClass="TireCalendarViewController" customModule="AutoMaintenanceTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IBP-0c-EmF"/>
                         <viewControllerLayoutGuide type="bottom" id="cSK-4s-9J6"/>
@@ -40,13 +40,105 @@
                     <view key="view" contentMode="scaleToFill" id="rKu-QR-ziF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of last tire rotation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fV3-Ms-UJZ">
+                                <rect key="frame" x="78" y="20" width="219" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ESo-D0-Spq">
+                                <rect key="frame" x="27.5" y="54" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="516059114.79299903">
+                                    <!--2017-05-09 21:45:14 +0000-->
+                                </date>
+                            </datePicker>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8f-rL-i58">
+                                <rect key="frame" x="46" y="278" width="282" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="BE4-If-fiA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="282" id="GJd-YF-Sdi"/>
+                                    <constraint firstAttribute="height" constant="1" id="Oru-hi-3JA"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Miles Traveled per Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJf-07-yyC">
+                                <rect key="frame" x="62" y="287" width="251" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="251" id="PbP-6P-wnw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hOL-R7-1pO">
+                                <rect key="frame" x="89" y="318" width="196" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="196" id="IRB-md-s0x"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuf-dS-ii6">
+                                <rect key="frame" x="46" y="359" width="282" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="6os-92-tHG"/>
+                                    <constraint firstAttribute="width" constant="282" id="slX-w6-Apj"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y19-08-WSr">
+                                <rect key="frame" x="27.5" y="368" width="320" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL7-pa-w2g">
+                                <rect key="frame" x="91.5" y="580" width="192" height="30"/>
+                                <state key="normal" title="Schedule Next Tire Rotation"/>
+                                <connections>
+                                    <action selector="scheduleChange:" destination="ogM-mr-prQ" eventType="touchUpInside" id="zt3-Sf-tRT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7V-cG-iDJ">
+                                <rect key="frame" x="187" y="563" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l7V-cG-iDJ" firstAttribute="top" secondItem="y19-08-WSr" secondAttribute="bottom" constant="-21" id="0eo-Jt-4j0"/>
+                            <constraint firstItem="LL7-pa-w2g" firstAttribute="top" secondItem="y19-08-WSr" secondAttribute="bottom" constant="-4" id="0me-Ww-eFc"/>
+                            <constraint firstItem="e8f-rL-i58" firstAttribute="centerX" secondItem="rKu-QR-ziF" secondAttribute="centerX" id="3gQ-fe-vaE"/>
+                            <constraint firstItem="hOL-R7-1pO" firstAttribute="centerX" secondItem="rKu-QR-ziF" secondAttribute="centerX" id="8vc-Ef-ZFJ"/>
+                            <constraint firstItem="ESo-D0-Spq" firstAttribute="centerX" secondItem="rKu-QR-ziF" secondAttribute="centerX" id="HEd-f3-hhY"/>
+                            <constraint firstItem="hOL-R7-1pO" firstAttribute="top" secondItem="FJf-07-yyC" secondAttribute="bottom" constant="10" id="II0-Io-elb"/>
+                            <constraint firstItem="y19-08-WSr" firstAttribute="top" secondItem="hOL-R7-1pO" secondAttribute="bottom" constant="20" id="It7-Ov-WyL"/>
+                            <constraint firstItem="e8f-rL-i58" firstAttribute="top" secondItem="ESo-D0-Spq" secondAttribute="bottom" constant="8" id="Lal-6T-eHP"/>
+                            <constraint firstItem="l7V-cG-iDJ" firstAttribute="centerX" secondItem="rKu-QR-ziF" secondAttribute="centerX" id="N9h-tN-zSk"/>
+                            <constraint firstItem="fuf-dS-ii6" firstAttribute="centerX" secondItem="rKu-QR-ziF" secondAttribute="centerX" id="NIr-tJ-Swn"/>
+                            <constraint firstItem="ESo-D0-Spq" firstAttribute="top" secondItem="fV3-Ms-UJZ" secondAttribute="bottom" constant="8" id="VYc-2b-Owc"/>
+                            <constraint firstItem="fV3-Ms-UJZ" firstAttribute="centerX" secondItem="rKu-QR-ziF" secondAttribute="centerX" id="YYU-Mg-dVq"/>
+                            <constraint firstItem="LL7-pa-w2g" firstAttribute="centerX" secondItem="rKu-QR-ziF" secondAttribute="centerX" id="ZAC-JB-i6v"/>
+                            <constraint firstItem="FJf-07-yyC" firstAttribute="centerX" secondItem="rKu-QR-ziF" secondAttribute="centerX" id="aPZ-MN-mfG"/>
+                            <constraint firstItem="fuf-dS-ii6" firstAttribute="top" secondItem="hOL-R7-1pO" secondAttribute="bottom" constant="11" id="dHi-MH-bfg"/>
+                            <constraint firstItem="FJf-07-yyC" firstAttribute="top" secondItem="ESo-D0-Spq" secondAttribute="bottom" constant="17" id="hQW-Pc-gOL"/>
+                            <constraint firstItem="fuf-dS-ii6" firstAttribute="centerX" secondItem="rKu-QR-ziF" secondAttribute="centerX" id="lZp-9f-w9b"/>
+                            <constraint firstItem="fV3-Ms-UJZ" firstAttribute="top" secondItem="IBP-0c-EmF" secondAttribute="bottom" id="rhE-9E-0ZF"/>
+                            <constraint firstItem="y19-08-WSr" firstAttribute="centerX" secondItem="rKu-QR-ziF" secondAttribute="centerX" id="zaF-6r-Jhd"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tire Maintenance" image="tires0" id="fYn-7b-kTx"/>
+                    <connections>
+                        <outlet property="carPicker" destination="y19-08-WSr" id="xQb-Ji-k4w"/>
+                        <outlet property="date" destination="ESo-D0-Spq" id="IcP-eJ-xt3"/>
+                        <outlet property="milesTrav" destination="hOL-R7-1pO" id="pQC-dr-ocg"/>
+                        <outlet property="testLabel" destination="l7V-cG-iDJ" id="bx9-A4-oDw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XI5-AN-CfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="1421"/>
+            <point key="canvasLocation" x="1228" y="1420.8395802098951"/>
         </scene>
         <!--Oil Maintenance-->
         <scene sceneID="2AM-S4-F73">
@@ -172,6 +264,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Oil Maintenance" image="oil0" id="IsX-Y3-7U2"/>
                     <connections>
+                        <outlet property="carPicker" destination="aaK-Mg-P2K" id="izf-zB-pPB"/>
                         <outlet property="date" destination="qaj-dn-WC3" id="PBR-ka-YV0"/>
                         <outlet property="milesTrav" destination="b1O-ZP-fsO" id="hIE-MS-vgb"/>
                         <outlet property="oilType" destination="C5a-Qt-Bz6" id="HE2-FR-24K"/>
