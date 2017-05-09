@@ -21,11 +21,6 @@ class CarDetailViewController: UIViewController, NSFetchedResultsControllerDeleg
 
     @IBOutlet weak var carLabel: UILabel!
     
-    if let car = Car(context: managedObjectContext) {
-    
-     
-        carLabel?.text = car.name
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = UIImageView(image: UIImage(named: "Landing.png"))
