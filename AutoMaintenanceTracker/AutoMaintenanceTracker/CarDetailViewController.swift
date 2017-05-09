@@ -18,31 +18,21 @@ class CarDetailViewController: UIViewController, NSFetchedResultsControllerDeleg
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     /* -------------------------------------------------------------------------------------------------------- */
+    
+    
+    var car: Car!
 
     @IBOutlet weak var carLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view = UIImageView(image: UIImage(named: "Landing.png"))
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Landing.png")!)
         // Do any additional setup after loading the view.
-   
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        updateViews()
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func updateViews() {
+        carLabel.text = car.name
     }
-    */
-
 }

@@ -73,14 +73,14 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "carCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "carCell", for: indexPath)
         let car = fetchedResultsController.fetchedObjects![indexPath.row]
         
         cell.textLabel?.text = car.name
         cell.detailTextLabel?.text = car.year + " " + car.make + car.model
         cell.imageView?.image = #imageLiteral(resourceName: "carimage.png")
         
-        cell.backgroundColor = UIColor.clear
+        cell.backgroundColor = .clear
         //  cell.backgroundView =
         //  cell.selectedBackgroundView =
         
@@ -97,21 +97,13 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let destination = CarDetailViewController() // Your destination
-        navigationController?.pushViewController(destination, animated: true)
-        
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    /* Also, you should ask how to display Oil Maintenance user detial in the CarDetial view controller */
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let destination = segue.destination as? CarDetailViewController {
+            destination.car = fetchedResultsController.fetchedObjects![myGarage.indexPathForSelectedRow!.row]
+        }
     }
-    */
+    
 
 }
