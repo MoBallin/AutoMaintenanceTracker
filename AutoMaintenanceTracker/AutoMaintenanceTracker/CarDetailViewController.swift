@@ -21,7 +21,6 @@ class CarDetailViewController: UIViewController, NSFetchedResultsControllerDeleg
 
     @IBOutlet weak var carLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = UIImageView(image: UIImage(named: "Landing.png"))
