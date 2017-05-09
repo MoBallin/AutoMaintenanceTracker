@@ -82,7 +82,7 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.backgroundColor = UIColor.clear
         //  cell.backgroundView =
-    //    cell.selectedBackgroundView =
+        //  cell.selectedBackgroundView =
         
         
         return cell
