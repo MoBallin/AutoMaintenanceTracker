@@ -20,6 +20,7 @@
 		93174F7B1E9DA27A002691AD /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93174F7A1E9DA27A002691AD /* Car.swift */; };
 		93174F8C1EB95740002691AD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93174F8B1EB95740002691AD /* CalendarViewController.swift */; };
 		93174F8E1EB9AE31002691AD /* EventAddedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93174F8D1EB9AE31002691AD /* EventAddedDelegate.swift */; };
+		EEA05BCE1EC2567800714478 /* TireCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA05BCD1EC2567800714478 /* TireCalendarViewController.swift */; };
 		EECC9A731EA848910015B286 /* NewCarUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC9A721EA848910015B286 /* NewCarUIViewController.swift */; };
 		EECC9A771EB81F830015B286 /* Landing.png in Resources */ = {isa = PBXBuildFile; fileRef = EECC9A761EB81F830015B286 /* Landing.png */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		93174F7A1E9DA27A002691AD /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		93174F8B1EB95740002691AD /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		93174F8D1EB9AE31002691AD /* EventAddedDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventAddedDelegate.swift; sourceTree = "<group>"; };
+		EEA05BCD1EC2567800714478 /* TireCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TireCalendarViewController.swift; path = ../TireCalendarViewController.swift; sourceTree = "<group>"; };
 		EECC9A721EA848910015B286 /* NewCarUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCarUIViewController.swift; sourceTree = "<group>"; };
 		EECC9A761EB81F830015B286 /* Landing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Landing.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 				92D1BBC11E9C3D02000F373F /* ViewController.swift */,
 				92D1BBC31E9C3D02000F373F /* Main.storyboard */,
 				93174F8B1EB95740002691AD /* CalendarViewController.swift */,
+				EEA05BCD1EC2567800714478 /* TireCalendarViewController.swift */,
 				93174F8D1EB9AE31002691AD /* EventAddedDelegate.swift */,
 				93174F781E9DA213002691AD /* CarsUIViewController.swift */,
 				93174F7A1E9DA27A002691AD /* Car.swift */,
@@ -290,6 +293,7 @@
 				93174F8E1EB9AE31002691AD /* EventAddedDelegate.swift in Sources */,
 				EECC9A731EA848910015B286 /* NewCarUIViewController.swift in Sources */,
 				93174F7B1E9DA27A002691AD /* Car.swift in Sources */,
+				EEA05BCE1EC2567800714478 /* TireCalendarViewController.swift in Sources */,
 				92D1BBC01E9C3D02000F373F /* AppDelegate.swift in Sources */,
 				93174F8C1EB95740002691AD /* CalendarViewController.swift in Sources */,
 				93174F791E9DA213002691AD /* CarsUIViewController.swift in Sources */,
