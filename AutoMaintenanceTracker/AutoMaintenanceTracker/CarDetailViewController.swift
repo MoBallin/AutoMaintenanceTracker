@@ -13,10 +13,24 @@ import CoreData
 
 class CarDetailViewController: UIViewController, NSFetchedResultsControllerDelegate {
 
+    
+    /* -------------------------------------------------------------------------------------------------------- */
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    /* -------------------------------------------------------------------------------------------------------- */
+
+    @IBOutlet weak var carLabel: UILabel!
+    
+    if let car = Car(context: managedObjectContext) {
+    
+     
+        carLabel?.text = car.name
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = UIImageView(image: UIImage(named: "Landing.png"))
         // Do any additional setup after loading the view.
+   
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,7 +38,7 @@ class CarDetailViewController: UIViewController, NSFetchedResultsControllerDeleg
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
 
