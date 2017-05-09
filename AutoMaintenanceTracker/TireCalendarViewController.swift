@@ -10,7 +10,7 @@ import UIKit
 import EventKit
 import CoreData
 
-class TireCalendarViewController: UIViewController {
+class TireCalendarViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -20,8 +20,11 @@ class TireCalendarViewController: UIViewController {
     @IBOutlet weak var milesTrav: UITextField!
     @IBOutlet weak var date: UIDatePicker!
     
+    @IBOutlet weak var carPicker: UIPickerView!
     @IBOutlet weak var testLabel: UILabel!
 //    @IBOutlet weak var oilType: UISegmentedControl!
+    
+    private var carNames: [String] = []
     
     
     
@@ -32,9 +35,15 @@ class TireCalendarViewController: UIViewController {
         
         let request = NSFetchRequest<Car>(entityName: "Car")
         request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-        _ = try! managedObjectContext.fetch(request)
-        
-        // Do any additional setup after loading the view.
+        let cars = try! managedObjectContext.fetch(request)
+        //print(cars)
+        for i in 0...(cars.count - 1){
+            carNames.append(cars[i].name)
+        }
+        //print(carNames)
+        carPicker.dataSource = self
+        carPicker.delegate = self
+        carPicker.reloadAllComponents()        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,13 +51,39 @@ class TireCalendarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return carNames.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return carNames[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //carText = carNames[row]
+    }
+    
+    
     @IBAction func scheduleChange(_ sender: Any) {
         let tireMileage: Float = 7500
         testLabel.text = ""
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
+        let carText: String = carNames[carPicker.selectedRow(inComponent: 0)]
+        
         var dayComponent = DateComponents()
+//        switch oilType.selectedSegmentIndex{
+//        case 0:
+//        oilMileage = 3000
+//        case 1:
+//            oilMileage = 5000
+//        default:
+//            oilMileage = 3000
+//        }
         if(milesTrav.text == "")
         {
             testLabel.text = "Please Enter Average Mileage"
@@ -64,7 +99,7 @@ class TireCalendarViewController: UIViewController {
         }
         else
         {
-            testLabel.text = "Please Enter whole number for mileage"
+            testLabel.text = "Please Enter Whole Number for Mileage"
             return
         }
         let num: Int = Int(milesTrav.text!)!
@@ -72,7 +107,7 @@ class TireCalendarViewController: UIViewController {
         dayComponent.day = totalDays
         let schedDate = cal.date(byAdding: dayComponent, to: currentDate)
         //testLabel.text = String(describing: schedDate)
-        addEventToCalendar(title: "Tire Rotation", startDate: schedDate!, endDate: schedDate!)
+        addEventToCalendar(title: ("Tire Rotation - " + carText), startDate: schedDate!, endDate: schedDate!)
         
         UIApplication.shared.open(URL(string: "calshow://")!, options: [:], completionHandler: nil)
         

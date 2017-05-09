@@ -99,8 +99,8 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let destination = CarDetailViewController() // Your destination
-        navigationController?.pushViewController(destination, animated: true)
+ //       let destination = CarDetailViewController() // Your destination
+ //       navigationController?.pushViewController(destination, animated: true)
         
     }
 

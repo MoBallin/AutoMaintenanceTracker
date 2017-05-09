@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xrF-hA-ujh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xrF-hA-ujh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="246" y="1421"/>
         </scene>
-        <!--Car Maintenance-->
+        <!--Oil Maintenance-->
         <scene sceneID="2AM-S4-F73">
             <objects>
                 <viewController id="8PM-g9-Nqg" customClass="CalendarViewController" customModule="AutoMaintenanceTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -525,6 +526,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Car Maintenance" image="home0" id="Mfx-DQ-HBx"/>
                     <connections>
+                        <outlet property="carPicker" destination="C4g-9o-YPN" id="K5s-R0-YXn"/>
                         <outlet property="date" destination="2Uc-kt-PFO" id="dvO-a9-8YD"/>
                         <outlet property="milesTrav" destination="Ooz-vr-kzo" id="KHa-yF-i1y"/>
                         <outlet property="testLabel" destination="Agb-Xx-O9a" id="0oo-yj-h8P"/>
@@ -556,6 +558,5 @@
     <resources>
         <image name="home0" width="25" height="25"/>
         <image name="oil0" width="25" height="25"/>
-        <image name="tires0" width="25" height="25"/>
     </resources>
 </document>
