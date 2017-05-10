@@ -1,8 +1,8 @@
 //
-//  CalendarViewController.swift
+//  TireCalendarViewController.swift
 //  AutoMaintenanceTracker
 //
-//  Created by Aaron Whaley on 5/2/17.
+//  Created by Aaron Whaley on 5/9/17.
 //  Copyright © 2017 Mohammed Diab. All rights reserved.
 //
 
@@ -10,24 +10,18 @@ import UIKit
 import EventKit
 import CoreData
 
-class CalendarViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class TireCalendarViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+
+    @IBOutlet weak var date: UIDatePicker!
+    @IBOutlet weak var carPicker: UIPickerView!
+    @IBOutlet weak var milesTrav: UITextField!
+    
+    @IBOutlet weak var testLabel: UILabel!
     
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-    
     var delegate: EventAddedDelegate?
     var calendar: EKCalendar?
-    @IBOutlet weak var milesTrav: UITextField!
-    @IBOutlet weak var date: UIDatePicker!
-    
-    @IBOutlet weak var carPicker: UIPickerView!
-    @IBOutlet weak var testLabel: UILabel!
-    @IBOutlet weak var oilType: UISegmentedControl!
-    
-    private var carNames: [String] = []
-    
-    
-    
+    private var cars: [Car] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,18 +32,13 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         carPicker.delegate = self
         // Do any additional setup after loading the view.
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         let request = NSFetchRequest<Car>(entityName: "Car")
         request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-        let cars = try! managedObjectContext.fetch(request)
-        //print(cars)
-        carNames = cars.map {$0.name}
-        
-        //print(carNames)
+        cars = try! managedObjectContext.fetch(request)
         carPicker.reloadAllComponents()
     }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -61,34 +50,36 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return carNames.count
+        return cars.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return carNames[row]
+        return cars[row].name
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //carText = carNames[row]
     }
-
+    
     
     @IBAction func scheduleChange(_ sender: Any) {
-        var oilMileage: Float = 0
+        let tireMileage: Float = 7500
         testLabel.text = ""
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
-        let carText: String = carNames[carPicker.selectedRow(inComponent: 0)]
-
+        
+        let car = cars[carPicker.selectedRow(inComponent: 0)]
+        let carText: String = car.name
+        
         var dayComponent = DateComponents()
-        switch oilType.selectedSegmentIndex{
-            case 0:
-                oilMileage = 3000
-            case 1:
-                oilMileage = 5000
-            default:
-                oilMileage = 3000
-        }
+  /*      switch oilType.selectedSegmentIndex{
+        case 0:
+            oilMileage = 3000
+        case 1:
+            oilMileage = 5000
+        default:
+            oilMileage = 3000
+        }*/
         if(milesTrav.text == "")
         {
             testLabel.text = "Please Enter Average Mileage"
@@ -108,18 +99,19 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             return
         }
         let num: Int = Int(milesTrav.text!)!
-        let totalDays: Int = Int((Int(oilMileage)/num).toIntMax())
+        let totalDays: Int = Int((Int(tireMileage)/num).toIntMax())
         dayComponent.day = totalDays
         let schedDate = cal.date(byAdding: dayComponent, to: currentDate)
+        
         //testLabel.text = String(describing: schedDate)
-        addEventToCalendar(title: ("Oil Change - " + carText), startDate: schedDate!, endDate: schedDate!)
+        addEventToCalendar(title: ("Tire Rotation - " + carText), startDate: schedDate!, endDate: schedDate!)
         
         UIApplication.shared.open(URL(string: "calshow://")!, options: [:], completionHandler: nil)
         
         /*else
-        {
-            testLabel.text = milesTrav.text
-        }*/
+         {
+         testLabel.text = milesTrav.text
+         }*/
         //testLabel.text = String(oilMileage)
     }
     
@@ -145,15 +137,6 @@ class CalendarViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             }
         })
     }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

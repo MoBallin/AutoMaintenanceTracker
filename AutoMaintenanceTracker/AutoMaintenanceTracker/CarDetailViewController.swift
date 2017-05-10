@@ -11,7 +11,7 @@ import EventKit
 import CoreData
 
 
-class CarDetailViewController: UIViewController, NSFetchedResultsControllerDelegate {
+class CarDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate {
 
     
     /* -------------------------------------------------------------------------------------------------------- */
@@ -22,6 +22,8 @@ class CarDetailViewController: UIViewController, NSFetchedResultsControllerDeleg
     
     var car: Car!
 
+    @IBOutlet weak var myImageView: UIImageView!
+    let picker = UIImagePickerController()
     @IBOutlet weak var carLabel: UILabel!
     
     override func viewDidLoad() {
