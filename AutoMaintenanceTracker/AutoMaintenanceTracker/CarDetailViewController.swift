@@ -19,6 +19,8 @@ class CarDetailViewController: UIViewController, UIImagePickerControllerDelegate
     
     /* -------------------------------------------------------------------------------------------------------- */
 
+    
+    
     @IBOutlet weak var myImageView: UIImageView!
     let picker = UIImagePickerController()
     @IBOutlet weak var carLabel: UILabel!
@@ -28,15 +30,16 @@ class CarDetailViewController: UIViewController, UIImagePickerControllerDelegate
         picker.sourceType = .photoLibrary
         picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(picker, animated: true, completion: nil)
-        
+//        var Car: Car
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
-        self.view = UIImageView(image: UIImage(named: "Landing.png"))
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Landing.png")!)        // Do any additional setup after loading the view.
    
+        
+         
     }
 
     override func didReceiveMemoryWarning() {

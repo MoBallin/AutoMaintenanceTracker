@@ -51,6 +51,7 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Dispose of any resources that can be recreated.
     }
   
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if fetchedResultsController.fetchedObjects?.count == 0
@@ -99,12 +100,18 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
- //       let destination = CarDetailViewController() // Your destination
- //       navigationController?.pushViewController(destination, animated: true)
+       // let destination = CarDetailViewController() // Your destination
+       // navigationController?.pushViewController(destination, animated: true)
+        self.performSegue(withIdentifier: "segue", sender: indexPath);
         
-    }
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let destinationVC = segue.destination as! CarDetailViewController
+            destinationVC.carLabel.text = fetchedResultsController.fetchedObjects![indexPath.row].name
+        }
 
-    /*
+    }
+    
+         /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

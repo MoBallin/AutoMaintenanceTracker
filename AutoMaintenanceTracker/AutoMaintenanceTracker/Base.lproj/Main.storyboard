@@ -215,7 +215,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="mNl-dw-V45" kind="show" id="CAl-je-hfb"/>
+                                            <segue destination="lDJ-nX-cm9" kind="show" identifier="segue" id="if8-WM-wOq"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -327,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99d-LB-Nnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4516" y="-833.43328335832086"/>
+            <point key="canvasLocation" x="3409" y="-825"/>
         </scene>
         <!--New CarUI View Controller-->
         <scene sceneID="mc5-BK-7BM">
@@ -576,24 +576,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPU-k5-fZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1321" y="1421"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="OE3-mJ-5ua">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mNl-dw-V45" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cQn-gu-Afc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="lDJ-nX-cm9" kind="relationship" relationship="rootViewController" id="iC8-f2-4L0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zyE-0C-IIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3409" y="-833"/>
         </scene>
     </scenes>
     <resources>
