@@ -76,7 +76,7 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "carCell", for: indexPath)
         let car = fetchedResultsController.fetchedObjects![indexPath.row]
         
-        cell.textLabel?.text = car.name
+        cell.textLabel?.text = car.name + "'s Car"
         cell.detailTextLabel?.text = car.year + " " + car.make + car.model
         cell.imageView?.image = #imageLiteral(resourceName: "carimage.png")
         

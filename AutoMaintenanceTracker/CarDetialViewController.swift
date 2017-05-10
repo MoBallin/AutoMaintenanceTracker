@@ -35,6 +35,6 @@ class CarDetailViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     func updateViews() {
-        carLabel.text = car.name
+        carLabel.text = car.name + "'s Car Status"
     }
 }

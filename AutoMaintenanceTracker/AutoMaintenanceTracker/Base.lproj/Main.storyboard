@@ -11,25 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="rCS-pA-N1I">
-            <objects>
-                <viewController id="vnA-8J-CLB" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bTO-Oh-IWa"/>
-                        <viewControllerLayoutGuide type="bottom" id="3P8-OC-gSt"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aXO-wM-BsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="2a4-Pw-R2U"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ybD-pY-HFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="246" y="1421"/>
-        </scene>
         <!--Oil Maintenance-->
         <scene sceneID="2AM-S4-F73">
             <objects>
@@ -238,7 +219,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="v2G-Vi-Pwx">
-                        <barButtonItem key="rightBarButtonItem" title="New Car" id="jje-cO-NOR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jje-cO-NOR">
                             <connections>
                                 <segue destination="VNM-2d-r1D" kind="show" id="xeR-FZ-3XH"/>
                             </connections>
@@ -469,7 +450,6 @@
                         <segue destination="NTv-lm-SyT" kind="relationship" relationship="viewControllers" id="1FP-yu-UeN"/>
                         <segue destination="8PM-g9-Nqg" kind="relationship" relationship="viewControllers" id="Blx-go-dFB"/>
                         <segue destination="UYW-dh-9gw" kind="relationship" relationship="viewControllers" id="bS6-8f-iOi"/>
-                        <segue destination="vnA-8J-CLB" kind="relationship" relationship="viewControllers" id="VSU-pr-Xm2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gs7-KW-T2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
