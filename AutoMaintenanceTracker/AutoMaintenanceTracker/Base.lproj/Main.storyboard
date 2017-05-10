@@ -271,6 +271,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b7f-jb-w13">
+                                <rect key="frame" x="67" y="108" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qu-9w-E6n">
+                                <rect key="frame" x="140" y="244" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add a photo"/>
+                                <connections>
+                                    <action selector="photoFromLibrary:" destination="lDJ-nX-cm9" eventType="touchUpInside" id="3Rc-To-OrY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -282,11 +294,12 @@
                     <navigationItem key="navigationItem" id="Tsb-DX-7E6"/>
                     <connections>
                         <outlet property="carLabel" destination="dyM-MJ-hxE" id="NWD-Gt-mSe"/>
+                        <outlet property="myImageView" destination="b7f-jb-w13" id="dnU-Sz-sHq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99d-LB-Nnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4516" y="-833"/>
+            <point key="canvasLocation" x="4516" y="-833.43328335832086"/>
         </scene>
         <!--New CarUI View Controller-->
         <scene sceneID="mc5-BK-7BM">

@@ -11,7 +11,7 @@ import EventKit
 import CoreData
 
 
-class CarDetailViewController: UIViewController, NSFetchedResultsControllerDelegate {
+class CarDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate {
 
     
     /* -------------------------------------------------------------------------------------------------------- */
@@ -19,10 +19,21 @@ class CarDetailViewController: UIViewController, NSFetchedResultsControllerDeleg
     
     /* -------------------------------------------------------------------------------------------------------- */
 
+    @IBOutlet weak var myImageView: UIImageView!
+    let picker = UIImagePickerController()
     @IBOutlet weak var carLabel: UILabel!
+    
+    @IBAction func photoFromLibrary(_ sender: UIButton) {
+        picker.allowsEditing = false
+        picker.sourceType = .photoLibrary
+        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        present(picker, animated: true, completion: nil)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        picker.delegate = self
         self.view = UIImageView(image: UIImage(named: "Landing.png"))
         // Do any additional setup after loading the view.
    
@@ -33,6 +44,19 @@ class CarDetailViewController: UIViewController, NSFetchedResultsControllerDeleg
         // Dispose of any resources that can be recreated.
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject])
+    {
+        let chosenImage = info[UIImagePickerControllerOriginalImage]
+        myImageView.contentMode = .scaleAspectFit //3
+        myImageView.image = chosenImage as! UIImage //4
+        dismiss(animated: true, completion: nil) //5
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController)
+    {
+        dismiss(animated: true, completion: nil)
+    }
+
     
     /*
     // MARK: - Navigation
