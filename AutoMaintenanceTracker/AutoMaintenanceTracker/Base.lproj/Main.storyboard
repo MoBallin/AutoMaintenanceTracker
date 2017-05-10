@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -266,57 +267,68 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User's Car" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyM-MJ-hxE">
-                                <rect key="frame" x="66" y="79" width="243" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="66" y="79" width="243" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="b7f-jb-w13">
-                                <rect key="frame" x="16" y="108" width="343" height="32"/>
+                                <rect key="frame" x="146.5" y="120.5" width="82" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="b7f-jb-w13" secondAttribute="height" multiplier="1:1" constant="50" id="uu9-v6-Xpv"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qu-9w-E6n">
-                                <rect key="frame" x="140" y="148" width="95" height="30"/>
+                                <rect key="frame" x="140" y="168" width="95" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Add a photo"/>
                                 <connections>
                                     <action selector="photoFromLibrary:" destination="lDJ-nX-cm9" eventType="touchUpInside" id="3Rc-To-OrY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Oil Change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dka-4m-3MY">
-                                <rect key="frame" x="16" y="306" width="121" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="265.5" width="135" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Tire Rotation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtg-5B-AvA">
-                                <rect key="frame" x="16" y="388" width="136" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Tire Rotation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtg-5B-AvA">
+                                <rect key="frame" x="16" y="353.5" width="149.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Next Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyU-GL-yWn">
-                                <rect key="frame" x="16" y="461" width="173" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Next Oil Change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyU-GL-yWn">
+                                <rect key="frame" x="16" y="441.5" width="205" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Next Tire Rotation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5t-qQ-1No">
+                                <rect key="frame" x="16" y="533.5" width="220" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="b7f-jb-w13" secondAttribute="trailing" id="1ZV-Rj-TuF"/>
-                            <constraint firstItem="2Qu-9w-E6n" firstAttribute="top" secondItem="b7f-jb-w13" secondAttribute="bottom" constant="8" id="6Yr-LE-r3S"/>
-                            <constraint firstItem="b7f-jb-w13" firstAttribute="top" secondItem="dyM-MJ-hxE" secondAttribute="bottom" constant="8" id="AYm-e4-aeE"/>
+                            <constraint firstItem="b7f-jb-w13" firstAttribute="top" secondItem="dyM-MJ-hxE" secondAttribute="bottom" constant="15" id="AYm-e4-aeE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dyM-MJ-hxE" secondAttribute="trailing" constant="50" id="HBU-Ja-5q5"/>
                             <constraint firstItem="b7f-jb-w13" firstAttribute="centerX" secondItem="cNC-XC-rHf" secondAttribute="centerX" id="IDe-uf-JNa"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="a5t-qQ-1No" secondAttribute="leading" id="Q4s-V6-ce2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dyU-GL-yWn" secondAttribute="leading" id="aMb-y4-zfV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Qu-9w-E6n" secondAttribute="trailing" constant="124" id="g1c-ZU-m0O"/>
                             <constraint firstItem="dyM-MJ-hxE" firstAttribute="top" secondItem="mlB-86-eqn" secondAttribute="bottom" constant="15" id="hkB-Ip-80y"/>
+                            <constraint firstItem="Gtg-5B-AvA" firstAttribute="top" secondItem="Dka-4m-3MY" secondAttribute="bottom" constant="65" id="lQ9-t2-XVi"/>
                             <constraint firstItem="dyM-MJ-hxE" firstAttribute="leading" secondItem="cNC-XC-rHf" secondAttribute="leadingMargin" constant="50" id="lZe-9i-Vwn"/>
                             <constraint firstItem="Dka-4m-3MY" firstAttribute="leading" secondItem="cNC-XC-rHf" secondAttribute="leadingMargin" id="mWj-sJ-mgL"/>
-                            <constraint firstItem="b7f-jb-w13" firstAttribute="leading" secondItem="cNC-XC-rHf" secondAttribute="leadingMargin" id="qZj-Hx-VO9"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Gtg-5B-AvA" secondAttribute="leading" id="qya-fy-heq"/>
+                            <constraint firstItem="a5t-qQ-1No" firstAttribute="top" secondItem="dyU-GL-yWn" secondAttribute="bottom" constant="69" id="rcx-tw-Vya"/>
+                            <constraint firstItem="dyU-GL-yWn" firstAttribute="top" secondItem="Gtg-5B-AvA" secondAttribute="bottom" constant="65" id="uJ6-Ae-z4Z"/>
                             <constraint firstItem="2Qu-9w-E6n" firstAttribute="leading" secondItem="cNC-XC-rHf" secondAttribute="leadingMargin" constant="124" id="uRp-ld-2Um"/>
-                            <constraint firstItem="Dka-4m-3MY" firstAttribute="top" secondItem="2Qu-9w-E6n" secondAttribute="bottom" constant="128" id="xUs-BG-bYD"/>
-                            <constraint firstItem="2Qu-9w-E6n" firstAttribute="top" secondItem="b7f-jb-w13" secondAttribute="bottom" constant="8" id="ycb-wi-x9H"/>
+                            <constraint firstItem="Dka-4m-3MY" firstAttribute="top" secondItem="2Qu-9w-E6n" secondAttribute="bottom" constant="65" id="xUs-BG-bYD"/>
+                            <constraint firstItem="2Qu-9w-E6n" firstAttribute="top" secondItem="b7f-jb-w13" secondAttribute="bottom" constant="15" id="ycb-wi-x9H"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Tsb-DX-7E6"/>
