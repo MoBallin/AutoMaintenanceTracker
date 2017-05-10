@@ -13,6 +13,7 @@ import CoreData
 
 class CarDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate {
     
+    @IBOutlet weak var carDetailLabel: UILabel!
     
     /* -------------------------------------------------------------------------------------------------------- */
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -36,5 +37,6 @@ class CarDetailViewController: UIViewController, UIImagePickerControllerDelegate
     
     func updateViews() {
         carLabel.text = car.name + "'s Car Status"
+        carDetailLabel.text = car.year + " " + car.make + " " + car.model
     }
 }

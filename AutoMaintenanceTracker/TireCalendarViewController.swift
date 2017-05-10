@@ -76,14 +76,7 @@ class TireCalendarViewController: UIViewController, UIPickerViewDelegate, UIPick
         let carText: String = carNames[carPicker.selectedRow(inComponent: 0)]
         
         var dayComponent = DateComponents()
-//        switch oilType.selectedSegmentIndex{
-//        case 0:
-//        oilMileage = 3000
-//        case 1:
-//            oilMileage = 5000
-//        default:
-//            oilMileage = 3000
-//        }
+
         if(milesTrav.text == "")
         {
             testLabel.text = "Please Enter Average Mileage"
