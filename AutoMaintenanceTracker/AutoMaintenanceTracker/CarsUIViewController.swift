@@ -61,13 +61,8 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
         {
             welcomeLabel.text = ""
         }
-
-        
-        
         
         return fetchedResultsController.fetchedObjects?.count ?? 0
-        
-    
     
     }
     
@@ -84,7 +79,6 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //  cell.backgroundView =
         //  cell.selectedBackgroundView =
         
-        
         return cell
     
     }
@@ -96,8 +90,6 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
             car.managedObjectContext!.delete(car)
         }
     }
-    
-    /* Also, you should ask how to display Oil Maintenance user detial in the CarDetial view controller */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? CarDetailViewController {
