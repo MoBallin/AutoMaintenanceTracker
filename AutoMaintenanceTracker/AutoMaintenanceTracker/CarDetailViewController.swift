@@ -44,11 +44,11 @@ class CarDetailViewController: UIViewController, UIImagePickerControllerDelegate
         // Dispose of any resources that can be recreated.
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject])
+    @nonobjc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject])
     {
         let chosenImage = info[UIImagePickerControllerOriginalImage]
         myImageView.contentMode = .scaleAspectFit //3
-        myImageView.image = chosenImage as! UIImage //4
+        myImageView.image = chosenImage as? UIImage //4
         dismiss(animated: true, completion: nil) //5
     }
     
