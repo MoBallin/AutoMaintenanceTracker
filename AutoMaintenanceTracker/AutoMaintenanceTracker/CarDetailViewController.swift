@@ -11,7 +11,7 @@ import EventKit
 import CoreData
 
 
-class CarDetailViewController: UIViewController, NSFetchedResultsControllerDelegate {
+class CarDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate {
 
     
     /* -------------------------------------------------------------------------------------------------------- */
@@ -22,7 +22,17 @@ class CarDetailViewController: UIViewController, NSFetchedResultsControllerDeleg
     
     var car: Car!
 
+    @IBOutlet weak var myImageView: UIImageView!
+    let picker = UIImagePickerController()
     @IBOutlet weak var carLabel: UILabel!
+    
+    @IBAction func photoFromLibrary(_ sender: UIButton) {
+        picker.allowsEditing = false
+        picker.sourceType = .photoLibrary
+        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        present(picker, animated: true, completion: nil)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
