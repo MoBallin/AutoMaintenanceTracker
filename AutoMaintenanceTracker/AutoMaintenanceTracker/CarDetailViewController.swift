@@ -12,6 +12,7 @@ import CoreData
 
 
 class CarDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate {
+    @IBOutlet weak var carImage: UIImageView!
 
     
     /* -------------------------------------------------------------------------------------------------------- */
@@ -36,6 +37,7 @@ class CarDetailViewController: UIViewController, UIImagePickerControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
+        
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Landing.png")!)        // Do any additional setup after loading the view.
    
         
@@ -47,11 +49,11 @@ class CarDetailViewController: UIViewController, UIImagePickerControllerDelegate
         // Dispose of any resources that can be recreated.
     }
     
-    @nonobjc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject])
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any])
     {
         let chosenImage = info[UIImagePickerControllerOriginalImage]
-        myImageView.contentMode = .scaleAspectFit //3
-        myImageView.image = chosenImage as? UIImage //4
+        carImage.contentMode = .scaleAspectFit //3
+        carImage.image = chosenImage as? UIImage //4
         dismiss(animated: true, completion: nil) //5
     }
     
