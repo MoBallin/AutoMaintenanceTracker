@@ -104,6 +104,5 @@ class CarsUIViewController: UIViewController, UITableViewDelegate, UITableViewDa
             destination.car = fetchedResultsController.fetchedObjects![myGarage.indexPathForSelectedRow!.row]
         }
     }
-    
 
 }
