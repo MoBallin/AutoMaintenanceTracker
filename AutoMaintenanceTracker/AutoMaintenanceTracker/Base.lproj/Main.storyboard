@@ -216,6 +216,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eEj-aU-v9h" firstAttribute="top" secondItem="aaK-Mg-P2K" secondAttribute="bottom" constant="18" id="0No-8o-UWz"/>
                             <constraint firstItem="cpf-IW-vvg" firstAttribute="top" secondItem="Ypz-uD-6Z3" secondAttribute="bottom" constant="5" id="367-VV-6tX"/>
                             <constraint firstItem="isp-su-RyO" firstAttribute="top" secondItem="aaK-Mg-P2K" secondAttribute="bottom" constant="20" id="743-Oe-lYV"/>
                             <constraint firstItem="eEj-aU-v9h" firstAttribute="centerX" secondItem="kps-Jr-9Av" secondAttribute="centerX" id="CvT-IT-8lh"/>
@@ -251,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juc-Fx-ygi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1525.5999999999999" y="690.40479760119945"/>
+            <point key="canvasLocation" x="1526" y="923"/>
         </scene>
         <!--My Car House-->
         <scene sceneID="gyb-d9-oH3">
@@ -304,7 +305,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="lDJ-nX-cm9" kind="show" id="6Yd-FA-Qmp"/>
+                                            <segue destination="lDJ-nX-cm9" kind="show" identifier="segue" id="oa1-ts-CWY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -326,7 +327,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="v2G-Vi-Pwx">
-                        <barButtonItem key="rightBarButtonItem" title="New Car" id="jje-cO-NOR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jje-cO-NOR">
                             <connections>
                                 <segue destination="VNM-2d-r1D" kind="show" id="xeR-FZ-3XH"/>
                             </connections>
@@ -373,31 +374,45 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="b7f-jb-w13">
-                                <rect key="frame" x="16" y="108" width="343" height="32"/>
+                                <rect key="frame" x="146.5" y="150.5" width="82" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="b7f-jb-w13" secondAttribute="height" multiplier="1:1" constant="50" id="uu9-v6-Xpv"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qu-9w-E6n">
-                                <rect key="frame" x="140" y="148" width="95" height="30"/>
+                                <rect key="frame" x="140" y="198" width="95" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Add a photo"/>
                                 <connections>
                                     <action selector="photoFromLibrary:" destination="lDJ-nX-cm9" eventType="touchUpInside" id="3Rc-To-OrY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Oil Change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dka-4m-3MY">
-                                <rect key="frame" x="16" y="306" width="121" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="261" width="135" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Tire Rotation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtg-5B-AvA">
-                                <rect key="frame" x="16" y="388" width="136" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Tire Rotation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtg-5B-AvA">
+                                <rect key="frame" x="16" y="349" width="149.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Next Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyU-GL-yWn">
-                                <rect key="frame" x="16" y="461" width="173" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Next Oil Change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyU-GL-yWn">
+                                <rect key="frame" x="16" y="437" width="205" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Next Tire Rotation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5t-qQ-1No">
+                                <rect key="frame" x="16" y="529" width="220" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pG-eE-bmv">
+                                <rect key="frame" x="166" y="108" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -415,6 +430,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Tsb-DX-7E6"/>
                     <connections>
+                        <outlet property="carDetailLabel" destination="5pG-eE-bmv" id="grX-HB-etl"/>
                         <outlet property="carLabel" destination="dyM-MJ-hxE" id="NWD-Gt-mSe"/>
                         <outlet property="myImageView" destination="b7f-jb-w13" id="dnU-Sz-sHq"/>
                     </connections>
@@ -462,8 +478,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like this car to be called?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3e-ev-zmE">
-                                <rect key="frame" x="30" y="84" width="315" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who owns this car?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3e-ev-zmE">
+                                <rect key="frame" x="113" y="84" width="149.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -555,7 +571,119 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gs7-KW-T2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="247" y="239"/>
+            <point key="canvasLocation" x="246" y="403"/>
+        </scene>
+        <!--Tire Maintenance-->
+        <scene sceneID="7tW-L1-joz">
+            <objects>
+                <viewController id="UYW-dh-9gw" customClass="TireCalendarViewController" customModule="AutoMaintenanceTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jsn-cX-E2V"/>
+                        <viewControllerLayoutGuide type="bottom" id="jP2-Iy-vv2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6i7-F3-pqq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of last tire rotation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lg-vG-InD">
+                                <rect key="frame" x="74" y="14" width="228.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Miles Traveled per day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqL-O5-fdK">
+                                <rect key="frame" x="68" y="269.5" width="238" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tES-g5-hZc">
+                                <rect key="frame" x="92" y="577.5" width="192" height="30"/>
+                                <state key="normal" title="Schedule Next Tire Rotation">
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="scheduleChange:" destination="UYW-dh-9gw" eventType="touchUpInside" id="unq-Uv-nIv"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J07-xz-DT3">
+                                <rect key="frame" x="67" y="269.5" width="240" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="h6p-hY-TdW"/>
+                                    <constraint firstAttribute="width" constant="240" id="uOX-df-0bb"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Vu-i9-HeL">
+                                <rect key="frame" x="67.5" y="348.5" width="240" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="9sd-O7-RQM"/>
+                                    <constraint firstAttribute="width" constant="240" id="A0O-iY-ib8"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agb-Xx-O9a">
+                                <rect key="frame" x="188" y="566.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ooz-vr-kzo">
+                                <rect key="frame" x="102" y="298.5" width="171" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="MVh-6z-k2Y"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Uc-kt-PFO">
+                                <rect key="frame" x="27.5" y="39.5" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="515478829.89956403">
+                                    <!--2017-05-03 04:33:49 +0000-->
+                                </date>
+                            </datePicker>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4g-9o-YPN">
+                                <rect key="frame" x="0.0" y="419.5" width="375" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="B94-aI-3Xx"/>
+                                    <constraint firstAttribute="height" constant="140" id="QLq-fJ-Tpy"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XqL-O5-fdK" firstAttribute="centerX" secondItem="6i7-F3-pqq" secondAttribute="centerX" id="6sb-n6-pE5"/>
+                            <constraint firstItem="XqL-O5-fdK" firstAttribute="top" secondItem="J07-xz-DT3" secondAttribute="bottom" constant="-1" id="Bq4-DO-7s3"/>
+                            <constraint firstItem="tES-g5-hZc" firstAttribute="centerX" secondItem="6i7-F3-pqq" secondAttribute="centerX" id="Cjh-5W-bXo"/>
+                            <constraint firstItem="C4g-9o-YPN" firstAttribute="top" secondItem="Ooz-vr-kzo" secondAttribute="bottom" constant="91" id="EbZ-vp-Yor"/>
+                            <constraint firstItem="Ooz-vr-kzo" firstAttribute="centerX" secondItem="6i7-F3-pqq" secondAttribute="centerX" id="FGA-6v-ZJk"/>
+                            <constraint firstItem="1Lg-vG-InD" firstAttribute="centerX" secondItem="6i7-F3-pqq" secondAttribute="centerX" id="I0r-dr-4z5"/>
+                            <constraint firstItem="Agb-Xx-O9a" firstAttribute="top" secondItem="C4g-9o-YPN" secondAttribute="bottom" constant="7" id="ItR-Vm-zM9"/>
+                            <constraint firstItem="1Lg-vG-InD" firstAttribute="top" secondItem="Jsn-cX-E2V" secondAttribute="bottom" constant="-6" id="Kzj-do-5xZ"/>
+                            <constraint firstItem="C4g-9o-YPN" firstAttribute="centerX" secondItem="6i7-F3-pqq" secondAttribute="centerX" id="RVt-sW-5OT"/>
+                            <constraint firstItem="0Vu-i9-HeL" firstAttribute="centerX" secondItem="6i7-F3-pqq" secondAttribute="centerX" id="Uvg-xn-mRx"/>
+                            <constraint firstItem="J07-xz-DT3" firstAttribute="centerX" secondItem="6i7-F3-pqq" secondAttribute="centerX" id="Yqs-0f-pdl"/>
+                            <constraint firstItem="tES-g5-hZc" firstAttribute="top" secondItem="C4g-9o-YPN" secondAttribute="bottom" constant="18" id="ZrD-22-amU"/>
+                            <constraint firstItem="Agb-Xx-O9a" firstAttribute="centerX" secondItem="6i7-F3-pqq" secondAttribute="centerX" id="f9g-m7-Roh"/>
+                            <constraint firstItem="2Uc-kt-PFO" firstAttribute="top" secondItem="1Lg-vG-InD" secondAttribute="bottom" constant="-1" id="g4o-me-9Ev"/>
+                            <constraint firstItem="XqL-O5-fdK" firstAttribute="top" secondItem="2Uc-kt-PFO" secondAttribute="bottom" constant="14" id="q13-FF-a7g"/>
+                            <constraint firstItem="Ooz-vr-kzo" firstAttribute="top" secondItem="XqL-O5-fdK" secondAttribute="bottom" constant="8" id="unc-lU-gjZ"/>
+                            <constraint firstItem="2Uc-kt-PFO" firstAttribute="centerX" secondItem="6i7-F3-pqq" secondAttribute="centerX" id="vEt-ED-Qv6"/>
+                            <constraint firstItem="0Vu-i9-HeL" firstAttribute="top" secondItem="Ooz-vr-kzo" secondAttribute="bottom" constant="20" id="wBL-mA-oYc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tire Maintenance" image="tires0" id="Mfx-DQ-HBx"/>
+                    <connections>
+                        <outlet property="carPicker" destination="C4g-9o-YPN" id="K5s-R0-YXn"/>
+                        <outlet property="date" destination="2Uc-kt-PFO" id="dvO-a9-8YD"/>
+                        <outlet property="milesTrav" destination="Ooz-vr-kzo" id="KHa-yF-i1y"/>
+                        <outlet property="testLabel" destination="Agb-Xx-O9a" id="0oo-yj-h8P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GPU-k5-fZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="1370"/>
         </scene>
     </scenes>
     <resources>
