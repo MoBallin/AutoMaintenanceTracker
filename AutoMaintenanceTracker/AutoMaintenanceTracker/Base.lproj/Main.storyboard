@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xrF-hA-ujh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xrF-hA-ujh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -382,24 +382,52 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b7f-jb-w13">
-                                <rect key="frame" x="67" y="108" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="b7f-jb-w13">
+                                <rect key="frame" x="16" y="108" width="343" height="32"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qu-9w-E6n">
-                                <rect key="frame" x="140" y="244" width="95" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qu-9w-E6n">
+                                <rect key="frame" x="140" y="148" width="95" height="30"/>
                                 <state key="normal" title="Add a photo"/>
                                 <connections>
                                     <action selector="photoFromLibrary:" destination="lDJ-nX-cm9" eventType="touchUpInside" id="3Rc-To-OrY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Oil Change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dka-4m-3MY">
+                                <rect key="frame" x="16" y="306" width="121" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Tire Rotation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtg-5B-AvA">
+                                <rect key="frame" x="16" y="388" width="136" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Next Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyU-GL-yWn">
+                                <rect key="frame" x="16" y="461" width="173" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="b7f-jb-w13" secondAttribute="trailing" id="1ZV-Rj-TuF"/>
+                            <constraint firstItem="2Qu-9w-E6n" firstAttribute="top" secondItem="b7f-jb-w13" secondAttribute="bottom" constant="8" id="6Yr-LE-r3S"/>
+                            <constraint firstItem="b7f-jb-w13" firstAttribute="top" secondItem="dyM-MJ-hxE" secondAttribute="bottom" constant="8" id="AYm-e4-aeE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dyM-MJ-hxE" secondAttribute="trailing" constant="50" id="HBU-Ja-5q5"/>
+                            <constraint firstItem="b7f-jb-w13" firstAttribute="centerX" secondItem="cNC-XC-rHf" secondAttribute="centerX" id="IDe-uf-JNa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Qu-9w-E6n" secondAttribute="trailing" constant="124" id="g1c-ZU-m0O"/>
                             <constraint firstItem="dyM-MJ-hxE" firstAttribute="top" secondItem="mlB-86-eqn" secondAttribute="bottom" constant="15" id="hkB-Ip-80y"/>
                             <constraint firstItem="dyM-MJ-hxE" firstAttribute="leading" secondItem="cNC-XC-rHf" secondAttribute="leadingMargin" constant="50" id="lZe-9i-Vwn"/>
+                            <constraint firstItem="Dka-4m-3MY" firstAttribute="leading" secondItem="cNC-XC-rHf" secondAttribute="leadingMargin" id="mWj-sJ-mgL"/>
+                            <constraint firstItem="b7f-jb-w13" firstAttribute="leading" secondItem="cNC-XC-rHf" secondAttribute="leadingMargin" id="qZj-Hx-VO9"/>
+                            <constraint firstItem="2Qu-9w-E6n" firstAttribute="leading" secondItem="cNC-XC-rHf" secondAttribute="leadingMargin" constant="124" id="uRp-ld-2Um"/>
+                            <constraint firstItem="Dka-4m-3MY" firstAttribute="top" secondItem="2Qu-9w-E6n" secondAttribute="bottom" constant="128" id="xUs-BG-bYD"/>
+                            <constraint firstItem="2Qu-9w-E6n" firstAttribute="top" secondItem="b7f-jb-w13" secondAttribute="bottom" constant="8" id="ycb-wi-x9H"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Tsb-DX-7E6"/>
@@ -567,6 +595,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="carimage.png" width="38" height="32"/>
         <image name="home0" width="25" height="25"/>
         <image name="oil0" width="25" height="25"/>
         <image name="tires0" width="25" height="25"/>
